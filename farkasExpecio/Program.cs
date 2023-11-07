@@ -18,7 +18,7 @@ namespace farkasExpecio
         static void Main(string[] args)
         {
             Adatok seged;
-            List<Adatok> l = new List<Adatok>();
+            List<Adatok> list = new List<Adatok>();
             string sor;
             StreamReader sr = new StreamReader("veetel.txt");
             while (!sr.EndOfStream)
@@ -27,7 +27,7 @@ namespace farkasExpecio
                 seged.napszam = Convert.ToInt32(sor.Split(' ')[0]);
                 seged.radios = Convert.ToInt32(sor.Split(' ')[1]);
                 seged.uzenet = sr.ReadLine();
-                l.Add(seged);
+                list.Add(seged);
             }
             sr.Close();
             feladat_2();
@@ -41,12 +41,12 @@ namespace farkasExpecio
 
         private static void feladat_7()
         {
-            
+            Console.WriteLine("7.feladat");
         }
 
         private static void feladat_6()
         {
-            
+           
         }
 
         private static void feladat_5()
@@ -56,20 +56,20 @@ namespace farkasExpecio
 
         private static void feladat_4()
         {
-            
+            Console.WriteLine("4.feladat");
         }
 
         private static void feladat_3()
         {
-            
+            Console.WriteLine("3.feladat");
         }
 
         private static void feladat_2()
         {
             //Az első üzenet rögzítője: 13 Az utolsó üzenet rögzítője: 18
             Console.WriteLine("2.feladat: ");
-            Console.WriteLine("Az első üzenet rögzítője:{}", l[0].radios);
-            Console.WriteLine("Az utoldós üzenet rögzítője: {}", l[l.Count - 1].radios);
+            Console.WriteLine("Az első üzenet rögzítője:{}", list[0].radios);
+            Console.WriteLine("Az utoldós üzenet rögzítője: {}", list[list.Count - 1].radios);
         }
     }
 }
